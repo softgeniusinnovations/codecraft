@@ -169,7 +169,7 @@ console.log('🎉 Welcome to JavaScript!');
 
 // Variables and Data Types
 const name = 'CodeCraft';
-let version = 2.0;
+let version = 1.0.0;
 var isAwesome = true;
 
 // Array Operations

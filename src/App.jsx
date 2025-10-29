@@ -23,59 +23,81 @@ const CODE_TEMPLATES = {
       {
         type: 'file',
         name: 'README.md',
-        content: `# 🌐 HTML Website Template
-
-Welcome to your new HTML website project! This template provides a modern, responsive starting point for web development.
-
-## 📁 Project Structure
-
-\`\`\`
-├── README.md          # Project documentation
-└── src/               # Source files
-    ├── index.html     # Main HTML file
-    ├── styles.css     # CSS styling
-    └── script.js      # JavaScript interactivity
-\`\`\`
-
-## 🚀 Features
-
-- **Responsive Design**: Mobile-first approach with flexible layouts
-- **Modern CSS**: Gradient backgrounds, animations, and glassmorphism effects
-- **Interactive JavaScript**: 3D mouse tracking and dynamic animations
-- **Clean Structure**: Well-organized code with separation of concerns
-
-## 🛠️ Getting Started
-
-1. Open \`src/index.html\` in your browser to view the website
-2. Edit \`src/styles.css\` to customize the appearance
-3. Modify \`src/script.js\` to add more interactivity
-
-## 💡 Tips
-
-- Use browser DevTools to debug and test responsive design
-- CSS animations are GPU-accelerated for smooth performance
-- The 3D effect responds to mouse movement for engagement
-
-## 📚 Technologies Used
-
-- **HTML5**: Semantic markup and modern web standards
-- **CSS3**: Flexbox, Grid, Animations, and Filters
-- **Vanilla JavaScript**: No dependencies, pure JS
-
-## 🎨 Customization Ideas
-
-- Change the gradient colors in \`styles.css\`
-- Add more sections to the HTML structure
-- Implement additional interactive features
-- Create a multi-page website
-
-## 📝 License
-
-This template is free to use for personal and commercial projects.
-
----
-
-Happy coding! 🎉`
+        content: `# 💻 CodeCraft — Advanced Online Code Editor
+    
+    CodeCraft is a free, open-source, web-based code editor and IDE that runs in your browser.  
+    Write and run **HTML, CSS, JavaScript, PHP, and Python** without installing anything.
+    
+    ## 📁 Project Structure
+    
+    \`\`\`
+    ├── README.md                # Project documentation
+    └── src/                     # Source files
+        ├── index.html           # App entry (editor UI)
+        ├── styles.css           # Frontend styling
+        ├── script.js            # Frontend logic & editor behavior
+        ├── backend/             # Server-side helpers (PHP, Python)
+        │   ├── php/             # PHP execution endpoints
+        │   └── python/          # Python execution endpoints
+        └── assets/              # Icons, images, demos
+    \`\`\`
+    
+    ## 🚀 What this does
+    
+    - Run small web projects directly in the browser and preview output instantly.  
+    - Support for HTML/CSS/JS, plus server runtimes for PHP and Python.  
+    - Simple, VS Code–inspired UI with file management, syntax highlighting, and live preview.  
+    - Sandbox execution to isolate user code from the host environment.
+    
+    ## 🔑 Key Features
+    
+    - Multi-language editing and live preview
+    - File creation, rename, delete, and in-browser file tree
+    - Tabbed editor interface and resizable panels
+    - Basic sandboxing for server-side code execution
+    - Lightweight, dependency-free frontend (vanilla JS)
+    - Open-source — extend, fork, and ship
+    
+    ## 🛠️ Quick start
+    
+    1. Clone the repo:
+       \`\`\`bash
+       git clone https://github.com/smshagor-dev/codecraft.git
+       cd codecraft
+       \`\`\`
+    2. Open the frontend:
+       - Open \`src/index.html\` in your browser for the UI (dev mode).
+    3. (Optional) Run backend for PHP/Python features:
+       - PHP: run a local server from \`src/backend/php\` (e.g., \`php -S localhost:8000\`).
+       - Python: run your chosen sandbox or API in \`src/backend/python\`.
+    4. Edit \`src/styles.css\` and \`src/script.js\` to customize the editor.
+    
+    ## 💡 Tips
+    
+    Here's the thing — keep the frontend and backend separated while you tinker. Use the frontend for UI-only changes; spin up the backend only when you need server execution. Use DevTools to inspect the sandboxed iframe and console for errors.
+    
+    ## 🧩 Extend ideas
+    
+    - Add theme support (dark/light and custom themes)  
+    - Implement multiple tabs and persistent storage (IndexedDB)  
+    - Add code completion and linting integrations  
+    - Add real-time collaboration using WebSockets
+    
+    ## 🛡 Security notes
+    
+    Do not deploy server-side execution endpoints without proper sandboxing and quotas. Treat any code execution service as untrusted input and isolate it (containers, timeouts, resource limits).
+    
+    ## 🤝 Contributing
+    
+    Contributions welcome. Fork, make changes, open a PR. Keep PRs focused, add tests where possible, and describe the change clearly.
+    
+    ## 📝 License
+    
+    CodeCraft is free and open-source. Use it, adapt it, and ship it under the license in this repo.
+    
+    ---
+    
+    Happy hacking — build fast, iterate often.`    
       },
       {
         type: 'folder',
@@ -287,7 +309,7 @@ console.log('🎉 Welcome to JavaScript!');
 
 // Variables and Data Types
 const name = 'CodeCraft';
-let version = 2.0;
+let version = 1.0.0;
 var isAwesome = true;
 
 // Array Operations
@@ -641,7 +663,7 @@ function App() {
                 icon={<FaGithub />}
                 variant="ghost"
                 size="sm"
-                onClick={() => window.open("https://github.com/smshagor-dev", "_blank")}
+                onClick={() => window.open("https://github.com/smshagor-dev/codecraft.git", "_blank")}
               />
             </Tooltip>
             <Tooltip label={`Switch to ${colorMode === "light" ? "dark" : "light"} mode`} placement="bottom">
