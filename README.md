@@ -83,7 +83,3 @@ Happy coding with **CodeCraft**! ⚡
 
 ```
 
----
-
-Would you like me to make a **README version with badges and screenshots** (like GitHub-ready format with demo, installation, and preview sections)? It makes the project page look much more professional.
-```
